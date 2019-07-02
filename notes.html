@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Notes</title>
+	<script type="text/javascript">
+		document.addEventListener('DOMContentLoaded', () => {
+			// by default the submit button is disabled
+			document.querySelector('#new-task').onsubmit = () =>{
+				//create new item for lis
+				const li = document.createElement('li');
+				li.innerHTML = document.querySelector('#task').value;
+				//adding new item in the list
+				document.querySelector('#tasks').append(li);
+				// clear input on the form
+				document.querySelector('#task').value = '';
+				// stop the form from resubmitting
+				return false;
+			};
+		});
+	</script>
+</head>
+<body>
+<h1>To do List| Tasks</h1>
+<ul id="tasks"></ul>
+<form id="new-task">
+	<input type="text" name="" id="task" placeholder="Type a Task">
+	<input type="submit" name="button" value="Add Task">
+</form>
+</body>
+</html>

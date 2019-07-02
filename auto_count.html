@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Auto Count</title>
+</head>
+<body>
+	<style type="text/css">
+		h1{
+			color: red;
+		}
+	</style>
+<script type="text/javascript">
+	document.addEventListener('DOMContentLoaded', ()=>{
+		setInterval(count, 1000);
+	});
+
+	let counter = 0;
+	function count(){
+		counter++;
+		document.querySelector('#counter').innerHTML = counter;
+		var total = counter.length()
+		document.querySelector('h4').innerHTML = total;
+	}
+
+</script>
+<h1 id="counter">0</h1>
+<h4></h4>
+</body>
+</html>
